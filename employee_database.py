@@ -23,7 +23,7 @@ def space():
     print('_' * 75)
 
 
-def initialize():
+def initialize(db):
     """connects database and creates tables"""
     db.connect()
     db.create_tables([Employee], safe=True)
@@ -386,5 +386,5 @@ def menu_loop():
 
 
 if __name__ == '__main__':
-    initialize()
+    initialize(db)
     menu_loop()
